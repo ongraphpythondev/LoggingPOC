@@ -1,0 +1,93 @@
+INFO 2020-09-22 18:40:47,290 autoreload 21268 17076 Watching for file changes with StatReloader
+INFO 2020-09-22 18:40:49,666 middleware 21268 24296 [36mGET /[0m
+INFO 2020-09-22 18:40:49,690 middleware 21268 24296 [35mGET / - 404[0m
+WARNING 2020-09-22 18:40:49,690 log 21268 24296 Not Found: /
+WARNING 2020-09-22 18:40:49,690 basehttp 21268 24296 "GET / HTTP/1.1" 404 2077
+INFO 2020-09-22 18:40:53,686 middleware 21268 24296 [36mGET /test[0m
+INFO 2020-09-22 18:40:53,687 middleware 21268 24296 [36mGET /test - 301[0m
+INFO 2020-09-22 18:40:53,689 basehttp 21268 24296 "GET /test HTTP/1.1" 301 0
+INFO 2020-09-22 18:40:53,704 middleware 21268 24296 [36mGET /test/[0m
+ERROR 2020-09-22 18:41:01,597 log 21268 24296 Internal Server Error: /test/
+Traceback (most recent call last):
+  File "F:\LoggingPOC\logapp\views.py", line 22, in Test
+    c='a'/10
+TypeError: unsupported operand type(s) for /: 'str' and 'int'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "E:\PythonHome\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "E:\PythonHome\lib\site-packages\django\core\handlers\base.py", line 179, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "F:\LoggingPOC\logapp\views.py", line 27, in Test
+    sendSimpleMail("Internal Error", 'exc_type',settings.EMAIL_HOST_USER,'durgesh.ccts@gmail.com')
+  File "F:\LoggingPOC\logapp\views.py", line 42, in sendSimpleMail
+    send_mail(subject,msg, emailfrom, [emailto],fail_silently = False)
+  File "E:\PythonHome\lib\site-packages\django\core\mail\__init__.py", line 61, in send_mail
+    return mail.send()
+  File "E:\PythonHome\lib\site-packages\django\core\mail\message.py", line 284, in send
+    return self.get_connection(fail_silently).send_messages([self])
+  File "E:\PythonHome\lib\site-packages\django\core\mail\backends\smtp.py", line 102, in send_messages
+    new_conn_created = self.open()
+  File "E:\PythonHome\lib\site-packages\django\core\mail\backends\smtp.py", line 62, in open
+    self.connection = self.connection_class(self.host, self.port, **connection_params)
+  File "E:\PythonHome\lib\smtplib.py", line 253, in __init__
+    (code, msg) = self.connect(host, port)
+  File "E:\PythonHome\lib\smtplib.py", line 339, in connect
+    self.sock = self._get_socket(host, port, self.timeout)
+  File "E:\PythonHome\lib\smtplib.py", line 308, in _get_socket
+    return socket.create_connection((host, port), timeout,
+  File "E:\PythonHome\lib\socket.py", line 787, in create_connection
+    for res in getaddrinfo(host, port, 0, SOCK_STREAM):
+  File "E:\PythonHome\lib\socket.py", line 918, in getaddrinfo
+    for res in _socket.getaddrinfo(host, port, family, type, proto, flags):
+socket.gaierror: [Errno 11002] getaddrinfo failed
+INFO 2020-09-22 18:41:01,643 middleware 21268 24296 [35mGET /test/ - 500[0m
+ERROR 2020-09-22 18:41:01,643 basehttp 21268 24296 "GET /test/ HTTP/1.1" 500 109201
+INFO 2020-09-22 18:42:32,759 autoreload 21268 17076 F:\LoggingPOC\LoggingPOC\settings.py changed, reloading.
+INFO 2020-09-22 18:42:33,605 autoreload 13744 20824 Watching for file changes with StatReloader
+INFO 2020-09-22 18:42:35,598 middleware 13744 3008 [36mGET /[0m
+INFO 2020-09-22 18:42:35,628 middleware 13744 3008 [35mGET / - 404[0m
+WARNING 2020-09-22 18:42:35,628 log 13744 3008 Not Found: /
+WARNING 2020-09-22 18:42:35,629 basehttp 13744 3008 "GET / HTTP/1.1" 404 2077
+INFO 2020-09-22 18:42:39,442 middleware 13744 3008 [36mGET /test[0m
+INFO 2020-09-22 18:42:39,444 middleware 13744 3008 [36mGET /test - 301[0m
+INFO 2020-09-22 18:42:39,445 basehttp 13744 3008 "GET /test HTTP/1.1" 301 0
+INFO 2020-09-22 18:42:39,467 middleware 13744 3008 [36mGET /test/[0m
+ERROR 2020-09-22 18:42:45,171 log 13744 3008 Internal Server Error: /test/
+Traceback (most recent call last):
+  File "F:\LoggingPOC\logapp\views.py", line 22, in Test
+    c='a'/10
+TypeError: unsupported operand type(s) for /: 'str' and 'int'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "E:\PythonHome\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "E:\PythonHome\lib\site-packages\django\core\handlers\base.py", line 179, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "F:\LoggingPOC\logapp\views.py", line 27, in Test
+    sendSimpleMail("Internal Error", 'exc_type',settings.EMAIL_HOST_USER,'durgesh.ccts@gmail.com')
+  File "F:\LoggingPOC\logapp\views.py", line 42, in sendSimpleMail
+    send_mail(subject,msg, emailfrom, [emailto],fail_silently = False)
+  File "E:\PythonHome\lib\site-packages\django\core\mail\__init__.py", line 61, in send_mail
+    return mail.send()
+  File "E:\PythonHome\lib\site-packages\django\core\mail\message.py", line 284, in send
+    return self.get_connection(fail_silently).send_messages([self])
+  File "E:\PythonHome\lib\site-packages\django\core\mail\backends\smtp.py", line 102, in send_messages
+    new_conn_created = self.open()
+  File "E:\PythonHome\lib\site-packages\django\core\mail\backends\smtp.py", line 69, in open
+    self.connection.login(self.username, self.password)
+  File "E:\PythonHome\lib\smtplib.py", line 734, in login
+    raise last_exception
+  File "E:\PythonHome\lib\smtplib.py", line 723, in login
+    (code, resp) = self.auth(
+  File "E:\PythonHome\lib\smtplib.py", line 646, in auth
+    raise SMTPAuthenticationError(code, resp)
+smtplib.SMTPAuthenticationError: (535, b'5.7.8 Username and Password not accepted. Learn more at\n5.7.8  https://support.google.com/mail/?p=BadCredentials k6sm15074752pfh.92 - gsmtp')
+INFO 2020-09-22 18:42:45,219 middleware 13744 3008 [35mGET /test/ - 500[0m
+ERROR 2020-09-22 18:42:45,219 basehttp 13744 3008 "GET /test/ HTTP/1.1" 500 104794
+INFO 2020-09-22 18:47:40,528 autoreload 13744 20824 F:\LoggingPOC\LoggingPOC\settings.py changed, reloading.
+INFO 2020-09-22 18:47:41,327 autoreload 21308 8200 Watching for file changes with StatReloader
