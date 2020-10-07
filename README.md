@@ -1,21 +1,21 @@
 
 # LoggingPOC
 <br><h1>Prerequisites:</h1><br><br>
-You will need the following programmes properly installed on your computer.
-Python 3.7+
-django 2.2+
+You will need the following programmes properly installed on your computer.<br>
+Python 3.7+ <br>
+django 2.2+ <br>
 Virtual Environment
 To install virtual environment on your system use:
 
-pip install virtualenv
+pip install virtualenv <br>
 
-or
+or<br>
 
-pip3 install virtualenv #if using linux(for python 3 and above)
+pip3 install virtualenv #if using linux(for python 3 and above) <br>
 
 <br><h1>Installation and Running :</h1><br><br>
-git clone https://github.com/ongraphpythondev/LoggingPOC.git
-cd LoggingPOC
+git clone https://github.com/ongraphpythondev/LoggingPOC.git <br>
+cd LoggingPOC<br>
 
 virtualenv venv or virtualenv venv -p python3 #if using linux(for python 3 and above)
 
