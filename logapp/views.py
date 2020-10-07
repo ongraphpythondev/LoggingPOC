@@ -24,7 +24,7 @@ def Test(request):
 
         exc_type, exc_value, exc_traceback = sys.exc_info()
         logger.error(exc_type)
-        sendSimpleMail("Internal Error", 'exc_type',settings.EMAIL_HOST_USER,'durgesh.ccts@gmail.com')
+        sendSimpleMail("Internal Error", exc_type,settings.EMAIL_HOST_USER,'durgesh.ccts@gmail.com')
         traceback_details = {
             'file_name': exc_traceback.tb_frame.f_code.co_filename,
             'line_no': exc_traceback.tb_lineno,

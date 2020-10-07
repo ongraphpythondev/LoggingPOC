@@ -1,0 +1,10 @@
+Django==3.0.5
+django-request-logging==0.7.2
+mysql-connector==2.2.9
+mysql-connector-python==8.0.21
+mysqlclient @ file:///C:/Users/dell/Downloads/mysqlclient-1.4.6-cp38-cp38-win32.whl
+python-dateutil==2.8.1
+pytz==2020.1
+requests==2.24.0
+sqlparse==0.2.4
+virtualenv==20.0.31
